@@ -1,14 +1,20 @@
 require('dotenv').config();
 const passport = require("passport");
-const express = reequire("express");
+const express = require("express");
 const cors = require("cors");
 
 const {connection} = require("./db");
 const port = process.env.PORT || 5000;
 
-const user = require("./models/user");
+const user = require("./model/user");
 const test = require("./model/test");
 
+const testRouter = require("./routes/test");
+const indexRouter = require("./routes/index");
+const errorRouter = require("./routes/error");
+const userRouter = require("./routes/user");
+
+const { registerStrategy, loginStrategy, verifyStrategy } = require("./auth");
 
 const app = express();
 app.use(express.json());

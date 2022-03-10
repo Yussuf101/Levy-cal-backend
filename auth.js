@@ -4,7 +4,7 @@ const LocalStrategy = require("passport-local").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const JWTStrategy = require("passport-jwt").Strategy;
 
-const User = require("./models/user");
+const User = require("./model/user");
 
 const mappings = {usernameField: "username", emailField:"email", passwordField: "password"};
 

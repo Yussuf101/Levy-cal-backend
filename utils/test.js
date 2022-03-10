@@ -1,6 +1,6 @@
 
 const req = require("express/lib/request");
-const Test = require("../models/test");
+const Test = require("../model/test");
 
 const addTest = async (name) => {
     
