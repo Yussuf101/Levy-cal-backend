@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 
 const {connection} = require("./db");
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 
 const user = require("./model/user");
 const test = require("./model/test");
@@ -39,7 +39,7 @@ app.use("*", errorRouter);
 app.listen(port, async () => {
     console.log("app is listening");
     connection.authenticate();
-    await User.sync({alter: true});
-    await Test.sync({ alter: true }); // This creates/updates tables
+    await user.sync({alter: true});
+    await test.sync({ alter: true }); // This creates/updates tables
     console.log("HTTP Server Started");
   });

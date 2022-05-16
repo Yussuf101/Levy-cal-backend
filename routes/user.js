@@ -22,11 +22,12 @@ const login = (req, res, next) => {
         } else if (!user) {
             return res.status(401).json({msg: "User has not been found", auth: false})
         }
-        const token = jwt.sign({user: {id: user.id, email: user.email}}, process.env.SECRET_KEY);
+        const token = jwt.sign({user: {id: user.id, username:user.username, email: user.email}}, process.env.SECRET_KEY);
         const fn = (error) => { 
             error? next(error) : res.status(200).json(
             {
                 msg: "User authenticated", 
+                username:user.username,
                 email: user.email, 
                 secret_token: token, 
                 auth_status: true,
@@ -42,5 +43,6 @@ const login = (req, res, next) => {
 
 router.post("/register", passport.authenticate("register", config), register);
 router.post("/login", login);
+router.get("/profile", passport.authenticate("jwt", config), profile);
 
 module.exports = router;
