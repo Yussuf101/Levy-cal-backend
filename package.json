@@ -27,14 +27,5 @@
   },
   "devDependencies": {
     "mysql2": "^2.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Yussuf101/levy-cal-backend.git"
-  },
- 
-  "bugs": {
-    "url": "https://github.com/Yussuf101/levy-cal-backend.git"
-  },
-  "homepage": "https://github.com/Yussuf101/levy-cal-backend"
+  }
 }
