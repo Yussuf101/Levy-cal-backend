@@ -10,7 +10,8 @@ const profile = async (req, res, next) => {
 };
 
 const register = async (req, res, next) => {
-    req.user.email ? res.status(201).json({msg: "You have successfully registered", email: req.user.email}) : res.status(401).json({msg: "This user already exixts"});
+    req.user.email ? res.status(201).json({msg: "You have successfully registered", email: req.user.email}) : res.status(401).json({msg: "This email is already in use"});
+
 };
 
 const login = (req, res, next) => {
