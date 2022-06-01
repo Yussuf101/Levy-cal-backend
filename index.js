@@ -19,7 +19,7 @@ const { registerStrategy, loginStrategy, verifyStrategy } = require("./auth");
 const app = express();
 app.use(express.json());
 
-app.use(cors({origin: process.env.origin}));  // {origin: process.env.origin}
+app.use(cors());  // {origin: process.env.origin}
 
 
 app.use((req, res, next) => {
