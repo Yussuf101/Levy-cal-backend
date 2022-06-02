@@ -1,4 +1,5 @@
-{"homepage": "https://github.com/Yussuf101/levy-cal-backend",
+{
+  "homepage": "https://github.com/Yussuf101/levy-cal-backend",
   "name": "levy-cal-backend",
   "version": "1.0.0",
   "description": "",
@@ -21,6 +22,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "gh-pages": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "new": "^0.1.1",
