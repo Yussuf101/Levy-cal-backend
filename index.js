@@ -22,10 +22,12 @@ app.use(express.json());
 app.use(cors());  // {origin: process.env.origin}
 
 
+
 app.use((req, res, next) => {
     res.header('Access-control-allow-origin', '*');
     next();
 });
+
 
 passport.use("register", registerStrategy);
 passport.use("login", loginStrategy);
